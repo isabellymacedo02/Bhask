@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Baskara</title>
+		<script>
+			function calcular(){
+				var a = document.getElementById('txt_a').value;
+				var b = document.getElementById('txt_b').value;
+				var c = document.getElementById('txt_c').value;
+				var delta = (b*b)-(4*a*c);
+				
+				document.getElementById('txt_delta').value = delta;
+				if(delta >=0){
+					var x1 = (-b + Math.sqrt(delta) )/(2*a);
+					var x2 = (-b - Math.sqrt(delta) )/(2*a);
+					
+					document.getElementById('txt_x1').value = x1;
+					document.getElementById('txt_x2').value = x2;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Baskara</h1>
+		a:<input type='text' id='txt_a'><br>
+		b:<input type='text' id='txt_b'><br>
+		c:<input type='text' id='txt_c'><br>
+		<br><br>
+		<input type='button' value='Calcular' onclick='calcular();'>
+		<br><br>
+		Delta:<input type='text' id='txt_delta'><br>
+		x1:<input type='text' id='txt_x1'><br>
+		x2:<input type='text' id='txt_x2'><br>
+		
+	</body>
+</html>
